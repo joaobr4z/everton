@@ -3,9 +3,8 @@
 
 //nome e salario de 5 pessoas verificar e printar aqueles que são acima de 1024
 
-
 int main(){
-
+    
     char nome[20], buffer[100];
     int n=0;
     double salario;
@@ -19,10 +18,8 @@ int main(){
         sscanf(buffer, "%lf", &salario);
 
         if(salario >= 1024){
-
             printf("\n Seu salario é acima de 1024 \n");
         }
     }
-
     return 0;
 }
