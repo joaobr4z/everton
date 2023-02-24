@@ -1,26 +1,31 @@
 //faça uma função que recebe a altura e o sexo, e retorne o seu peso ideal h- 72.7 * alt -58, m- 62.1*alt -44.7
 #include <stdio.h>
 
-void calc(int sexo, float altura, float calc){
+void calc(int sexo, float altura){
+	float calc;
 	if (sexo==1){
 		calc = (altura * 72.7) - 58;
 }
 	else{	
 		calc = (altura * 62.1) - 44.7;
 }
+
+return calc;
 }
 
 int main(){
 	
 	int sexo_main;
-	float altura_main, calc;
+	float altura_main, calc_main;
 	
 	printf("Qual eh o seu sexo?\nDigite 1 para HOMEM e 2 para MULHER:\n");
 	scanf("%d", &sexo_main);
 	printf("Digite aqui a sua altura:\n");
 	scanf("%f", &altura_main);
 	
-	calc(sexo_main, altura_main, calc);
+	calc_main = calc(sexo_main, altura_main, calc);
+	
+	printf("%f esse seria o seu peso ideal", calc_main);
 	
 	return 0;
 }
